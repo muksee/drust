@@ -13,5 +13,3 @@ macro_rules! syscall {
 }};
 }
 fn main() {}
-
-pub fn epoll_create() -> io::Result<RawFd> {}
