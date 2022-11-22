@@ -1,0 +1,9 @@
+
+###
+GET http://127.0.0.1:8000/ HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/index.html HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/no_file.html HTTP/1.1
