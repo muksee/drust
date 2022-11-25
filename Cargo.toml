@@ -22,6 +22,4 @@ members = [
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-# == FAQ ==
-# 1.如何在这里兼容nightly的处理?
-# 通过将workspace的member的注释开启,来关闭不相关的包
+
