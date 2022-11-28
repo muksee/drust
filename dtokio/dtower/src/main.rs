@@ -40,7 +40,5 @@ mod tests {
     }
 
     #[tokio::test]
-    async fn test_and_then() {
-        
-    }
+    async fn test_and_then() {}
 }
