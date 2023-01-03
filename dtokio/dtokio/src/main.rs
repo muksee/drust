@@ -1,19 +1,19 @@
-use futures::future::FutureExt;
-use futures::future::TryFuture;
-use futures::future::TryFutureExt;
-use std::time::Duration;
-use tokio;
-use tokio::time;
+use tokio::io::{self, BufWriter, AsyncWriteExt};
+use tokio::fs::File;
 
 #[tokio::main]
-async fn main() {
-    let fut = async {
-        time::sleep(Duration::from_secs(5)).await;
-        println!("task 1 complete");
-        Err::<i32, i32>(100)
-    };
+async fn main() -> io::Result<()> {
+    let f = File::create("foo.txt").await?;
+    {
+        let mut writer = BufWriter::new(f);
 
-    let ret = fut.map_err(|x| x ^ 2).await;
+        // Write a byte to the buffer.
+        writer.write(&[42u8]).await?;
 
-    println!("result: {:?}", ret);
+        // Flush the buffer before it goes out of scope.
+        writer.flush().await?;
+
+    } // Unless flushed or shut down, the contents of the buffer is discarded on drop.
+
+    Ok(())
 }
