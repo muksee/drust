@@ -1,11 +1,13 @@
 use hyper::{body::HttpBody, Body, Request};
-use std::{env};
+use std::env;
 use tokio::{
     io::{self, AsyncWriteExt},
     net::TcpStream,
 };
 
 extern crate tokio;
+
+use hyper::client;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
