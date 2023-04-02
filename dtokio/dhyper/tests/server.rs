@@ -20,7 +20,7 @@ async fn server1() {
     let server = Server::bind(&addr).serve(make_svc);
 
     if let Err(e) = server.await {
-        eprintln!("server error: {}", e);
+        eprintln!("server error: {e}");
     }
 }
 
@@ -59,7 +59,7 @@ async fn server2() {
     let server = Server::bind(&addr).serve(make_svc);
 
     if let Err(e) = server.await {
-        eprintln!("server error: {}", e);
+        eprintln!("server error: {e}");
     }
 }
 
@@ -76,6 +76,6 @@ async fn server3() {
     let server = Server::bind(&addr).serve(make_svc);
 
     if let Err(e) = server.await {
-        eprintln!("server error: {}", e);
+        eprintln!("server error: {e}");
     }
 }
