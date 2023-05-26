@@ -11,7 +11,9 @@ extern crate tokio;
 #[tokio::main]
 async fn main() {
     let addr = SocketAddr::from(([127, 0, 0, 1], 3001));
-    let make_svc = make_service_fn(|_conn| async { Ok::<_, Infallible>(service_fn(hello_world)) });
+    let make_svc = make_service_fn(|_conn| async {
+        Ok::<_, Infallible>(service_fn(hello_world))
+    });
 
     let server = Server::bind(&addr).serve(make_svc);
 
@@ -30,9 +32,15 @@ async fn shutdown_signal() {
         .expect("Failed to install CTRL+C signal handler!")
 }
 
-async fn hello_world(req: Request<Body>) -> Result<Response<Body>, hyper::Error> {
+async fn hello_world(
+    req: Request<Body>,
+) -> Result<Response<Body>, hyper::Error> {
     let mut response = Response::new(Body::empty());
-    match (req.method(), req.uri().path()) {
+    match (
+        req.method(),
+        req.uri()
+            .path(),
+    ) {
         (&Method::GET, "/get") => {
             *response.body_mut() = Body::from("I am from GET /get");
         }
@@ -40,18 +48,24 @@ async fn hello_world(req: Request<Body>) -> Result<Response<Body>, hyper::Error>
             *response.body_mut() = req.into_body();
         }
         (&Method::POST, "/post/upper") => {
-            let mapping = req.into_body().map_ok(|chunk| {
-                chunk
-                    .iter()
-                    .map(|byte| byte.to_ascii_uppercase())
-                    .collect::<Vec<u8>>()
-            });
+            let mapping = req
+                .into_body()
+                .map_ok(|chunk| {
+                    chunk
+                        .iter()
+                        .map(|byte| byte.to_ascii_uppercase())
+                        .collect::<Vec<u8>>()
+                });
 
             *response.body_mut() = Body::wrap_stream(mapping);
         }
         (&Method::POST, "/post/reverse") => {
             let full_body = hyper::body::to_bytes(req.into_body()).await?;
-            let reversed = full_body.iter().rev().cloned().collect::<Vec<u8>>();
+            let reversed = full_body
+                .iter()
+                .rev()
+                .cloned()
+                .collect::<Vec<u8>>();
             *response.body_mut() = reversed.into();
         }
         _ => {
