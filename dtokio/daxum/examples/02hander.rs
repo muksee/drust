@@ -2,11 +2,17 @@ extern crate tokio;
 
 use std::net::SocketAddr;
 
-use axum::routing::get;
-use axum::routing::post;
-use axum::Router;
-use hyper::body::Bytes;
-use hyper::StatusCode;
+use axum::{
+    routing::{
+        get,
+        post,
+    },
+    Router,
+};
+use hyper::{
+    body::Bytes,
+    StatusCode,
+};
 
 #[tokio::main]
 async fn main() {
@@ -29,7 +35,7 @@ async fn unit_handler() {}
 
 // string handler
 async fn string_handler() -> String {
-    String::from("Hello Axum")
+    String::from("Hello Axum\n")
 }
 
 // echo handler
