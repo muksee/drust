@@ -11,7 +11,7 @@ members = [
     # "ruststd/typointer",
     # "ruststd/tychar",
     # "rustrefer/ch10type",
-    # "toomanylist",
+    "toomanylist",
     # "dtokio/dtokio",
     # "dtokio/dhyper",
     # "dtokio/dtower",
