@@ -8,6 +8,7 @@ members = [
     # "ruststd/modpin",
     # "ruststd/modany",
     # "ruststd/modprocess",
+    "ruststd/modpanic",
     # "ruststd/typointer",
     # "ruststd/tychar",
     # "rustrefer/ch10type",
@@ -16,7 +17,7 @@ members = [
     # "dtokio/dhyper",
     # "dtokio/dtower",
     # "dtokio/dtracing",
-    "dtokio/daxum",
+    # "dtokio/daxum",
     # "dtokio/dtonic",
     # "dtokio/dbytes",
     # "dtokio/dmio",
@@ -27,6 +28,7 @@ members = [
     # "dwasmtime/mdp",
     # "dwasmtime/embed",
     # "drocket",
+    # "dmonoio",
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
