@@ -1,8 +1,14 @@
-use std::alloc::GlobalAlloc;
-use std::alloc::Layout;
-use std::alloc::System;
-use std::sync::atomic::AtomicUsize;
-use std::sync::atomic::Ordering;
+use std::{
+    alloc::{
+        GlobalAlloc,
+        Layout,
+        System,
+    },
+    sync::atomic::{
+        AtomicUsize,
+        Ordering,
+    },
+};
 
 struct Counter;
 
@@ -19,7 +25,7 @@ unsafe impl GlobalAlloc for Counter {
 
     unsafe fn dealloc(&self, ptr: *mut u8, layout: Layout) {
         System.dealloc(ptr, layout);
-        ALLOCATED.fetch_sub(1, Ordering::SeqCst);
+        ALLOCATED.fetch_sub(layout.size(), Ordering::SeqCst);
     }
 }
 
@@ -29,6 +35,10 @@ static COUNTER: Counter = Counter;
 fn main() {
     let mut v = Vec::new();
 
+    println!(
+        "--> allocated bytes before main: {}",
+        ALLOCATED.load(Ordering::SeqCst)
+    );
     for i in 0..10 {
         v.push(Box::new(i));
         println!(
@@ -36,4 +46,11 @@ fn main() {
             ALLOCATED.load(Ordering::SeqCst)
         );
     }
+
+    drop(v);
+
+    println!(
+        "--> allocated bytes before main: {}",
+        ALLOCATED.load(Ordering::SeqCst)
+    );
 }
