@@ -1,153 +1,153 @@
-<mxfile host="app.diagrams.net" modified="2023-07-10T14:09:20.781Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.67" etag="qg-vNEztV5iDxanM9GzL" version="21.6.1" type="device">
-  <diagram name="第 1 页" id="6XiFniJ_3vb5GIvCf4X_">
-    <mxGraphModel dx="2074" dy="1166" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-1" value="FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" vertex="1" parent="1">
-          <mxGeometry x="330" y="360" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-2" value="Fn: FnMut,FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" vertex="1" parent="1">
-          <mxGeometry x="330" y="520" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-3" value="FnMut: FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" vertex="1" parent="1">
-          <mxGeometry x="330" y="440" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#000000;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="550" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-4" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 13px;&quot;&gt;捕获共享引用&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 13px;&quot;&gt;或&lt;/span&gt;&lt;/div&gt;不捕获" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#dae8fc;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="20" y="520" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-5" value="消耗f, 只调一次&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;更新f, 可调多次&lt;br&gt;共享f, 可调多次" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="611" y="520" width="99" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-9" value="call_once(&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;self&lt;/b&gt;&lt;/font&gt;,args)&lt;br style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;call_mut(&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&amp;amp;mut self&lt;/font&gt;&lt;/b&gt;,args)&lt;br style=&quot;font-size: 13px;&quot;&gt;call(&lt;b style=&quot;font-size: 13px;&quot;&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 13px;&quot;&gt;&amp;amp;self&lt;/font&gt;&lt;/b&gt;,args)&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="450" y="520" width="161" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-10" value="捕获可变引用&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#ffe6cc;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="20" y="440" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-11" value="消耗f, 只调一次&lt;br&gt;更新f, 可调多次&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="611" y="440" width="99" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-12" value="call_once(&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;self&lt;/b&gt;&lt;/font&gt;,args)&lt;br style=&quot;font-size: 13px;&quot;&gt;call_mut(&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&amp;amp;mut self&lt;/font&gt;&lt;/b&gt;,args)&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="450" y="440" width="161" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-13" value="捕获值 /所有权&lt;br&gt;&lt;br&gt;适用语义:&lt;br&gt;MOVE、COPY&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f8cecc;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="20" y="360" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-14" value="消耗f, 只调一次&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="611" y="360" width="99" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-15" value="call_once(&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;self&lt;/b&gt;&lt;/font&gt;,args)&lt;br&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="450" y="360" width="161" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-47" value="捕获模式" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="20" y="300" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-52" value="let f =&lt;br&gt;struct Closure&amp;lt;&#39;a&amp;gt; {&lt;br style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; e: &amp;amp;&#39;a String,&lt;br style=&quot;font-size: 13px;&quot;&gt;} { .. }" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#dae8fc;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="140" y="520" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-53" value="let &lt;font color=&quot;#ff3333&quot;&gt;mut &lt;/font&gt;f =&lt;br&gt;struct Closure&amp;lt;&#39;a&amp;gt; {&lt;br style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; e: &amp;amp;&#39;a mut String,&lt;br style=&quot;font-size: 13px;&quot;&gt;} { .. }" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#ffe6cc;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="140" y="440" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-54" value="let f =&lt;br&gt;struct Closure {&lt;br style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; e: String,&lt;br style=&quot;font-size: 13px;&quot;&gt;} { .. }" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f8cecc;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="140" y="360" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-55" value="闭包类型" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="140" y="300" width="140" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-56" value="闭包特征" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="330" y="300" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-57" value="特征方法" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="450" y="300" width="260" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-59" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#3399FF;strokeColor=#3399FF;strokeWidth=2;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-52" target="Zlmr2kHPyGNLL76UW4VX-3">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="230" y="630" as="sourcePoint" />
-            <mxPoint x="280" y="580" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-61" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#3399FF;strokeColor=#3399FF;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-52" target="Zlmr2kHPyGNLL76UW4VX-2">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="490" as="sourcePoint" />
-            <mxPoint x="690" y="440" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-62" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#3399FF;strokeColor=#3399FF;jumpSize=6;shadow=0;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-52" target="Zlmr2kHPyGNLL76UW4VX-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="700" as="sourcePoint" />
-            <mxPoint x="690" y="420" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-63" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF9933;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-53" target="Zlmr2kHPyGNLL76UW4VX-3">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="430" as="sourcePoint" />
-            <mxPoint x="690" y="380" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-64" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF9933;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-53" target="Zlmr2kHPyGNLL76UW4VX-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="470" as="sourcePoint" />
-            <mxPoint x="690" y="420" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-65" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF6666;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-54" target="Zlmr2kHPyGNLL76UW4VX-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="510" as="sourcePoint" />
-            <mxPoint x="690" y="460" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-69" value="环境影响" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="710" y="300" width="90" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-70" value="消耗环境变量&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="710" y="360" width="90" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-71" value="更新环境变量&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="710" y="440" width="90" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-72" value="对环境无影响&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="710" y="520" width="90" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-74" value="impl" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="280" y="360" width="50" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-77" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;其它说明:&lt;br style=&quot;font-size: 13px;&quot;&gt;1.关键字&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;move&lt;/b&gt;&lt;/font&gt;: 捕获共享/可变引用时, 将目标值的也移入闭包....使引用与值绑于相同作用域, 具有&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 13px;&quot;&gt;相同存活期&lt;/font&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;2.&lt;b style=&quot;font-size: 13px;&quot;&gt;&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 13px;&quot;&gt;fn &lt;/font&gt;&lt;/b&gt;类型是函数指针,指向任意Rust函数..实现了Fn,FnMut,FnOnce, 区别是没有捕获功能&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=0;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="20" y="680" width="780" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-78" value="Fn,FnMut,FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" vertex="1" parent="1">
-          <mxGeometry x="330" y="600" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-79" value="无捕获,非闭包&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="600" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-80" value="可调多次" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="611" y="600" width="99" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-81" value="f()&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="450" y="600" width="161" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-82" value="let f: &lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;fn() -&amp;gt; r&lt;/font&gt;&lt;/b&gt; = FUNC" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="140" y="600" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-83" value="与环境无关&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="710" y="600" width="90" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-84" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="Zlmr2kHPyGNLL76UW4VX-82" target="Zlmr2kHPyGNLL76UW4VX-78">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="650" as="sourcePoint" />
-            <mxPoint x="580" y="600" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Zlmr2kHPyGNLL76UW4VX-85" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Rust 闭包与函数指针&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="20" y="230" width="780" height="70" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="第 1 页" id="6XiFniJ_3vb5GIvCf4X_">
+        <mxGraphModel dx="1642" dy="1039" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-1" value="FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="360" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-2" value="Fn: FnMut,FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="520" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-3" value="FnMut: FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="440" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#000000;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-4" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 13px;&quot;&gt;捕获共享引用&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 13px;&quot;&gt;或&lt;/span&gt;&lt;/div&gt;不捕获" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#dae8fc;strokeColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="520" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-5" value="消耗f, 只调一次&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;更新f, 可调多次&lt;br&gt;共享f, 可调多次" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="611" y="520" width="99" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-9" value="call_once(&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;self&lt;/b&gt;&lt;/font&gt;,args)&lt;br style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;call_mut(&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&amp;amp;mut self&lt;/font&gt;&lt;/b&gt;,args)&lt;br style=&quot;font-size: 13px;&quot;&gt;call(&lt;b style=&quot;font-size: 13px;&quot;&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 13px;&quot;&gt;&amp;amp;self&lt;/font&gt;&lt;/b&gt;,args)&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="520" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-10" value="捕获可变引用&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#ffe6cc;strokeColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="440" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-11" value="消耗f, 只调一次&lt;br&gt;更新f, 可调多次&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="611" y="440" width="99" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-12" value="call_once(&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;self&lt;/b&gt;&lt;/font&gt;,args)&lt;br style=&quot;font-size: 13px;&quot;&gt;call_mut(&lt;b style=&quot;border-color: var(--border-color); font-size: 13px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 13px;&quot; color=&quot;#ff0000&quot;&gt;&amp;amp;mut self&lt;/font&gt;&lt;/b&gt;,args)&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="440" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-13" value="捕获值 /所有权&lt;br&gt;&lt;br&gt;适用语义:&lt;br&gt;MOVE、COPY&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f8cecc;strokeColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="360" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-14" value="消耗f, 只调一次&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="611" y="360" width="99" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-15" value="call_once(&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;self&lt;/b&gt;&lt;/font&gt;,args)&lt;br&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="360" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-47" value="捕获模式" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-52" value="let f =&lt;br&gt;struct Closure&amp;lt;'a&amp;gt; {&lt;br style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; e: &amp;amp;'a String,&lt;br style=&quot;font-size: 13px;&quot;&gt;} { .. }" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#dae8fc;strokeColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="520" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-53" value="let &lt;font color=&quot;#ff3333&quot;&gt;mut &lt;/font&gt;f =&lt;br&gt;struct Closure&amp;lt;'a&amp;gt; {&lt;br style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; e: &amp;amp;'a mut String,&lt;br style=&quot;font-size: 13px;&quot;&gt;} { .. }" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#ffe6cc;strokeColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="440" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-54" value="let f =&lt;br&gt;struct Closure {&lt;br style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp; &amp;nbsp; e: String,&lt;br style=&quot;font-size: 13px;&quot;&gt;} { .. }" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f8cecc;strokeColor=#000000;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="360" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-55" value="闭包类型" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="300" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-56" value="闭包特征" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-57" value="特征方法" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="300" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-59" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#3399FF;strokeColor=#3399FF;strokeWidth=2;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-52" target="Zlmr2kHPyGNLL76UW4VX-3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="230" y="630" as="sourcePoint"/>
+                        <mxPoint x="280" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-61" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#3399FF;strokeColor=#3399FF;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-52" target="Zlmr2kHPyGNLL76UW4VX-2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="490" as="sourcePoint"/>
+                        <mxPoint x="690" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-62" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#3399FF;strokeColor=#3399FF;jumpSize=6;shadow=0;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-52" target="Zlmr2kHPyGNLL76UW4VX-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="700" as="sourcePoint"/>
+                        <mxPoint x="690" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-63" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF9933;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-53" target="Zlmr2kHPyGNLL76UW4VX-3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="430" as="sourcePoint"/>
+                        <mxPoint x="690" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-64" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF9933;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-53" target="Zlmr2kHPyGNLL76UW4VX-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="470" as="sourcePoint"/>
+                        <mxPoint x="690" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-65" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF6666;jumpSize=6;shadow=0;strokeWidth=2;fontSize=13;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-54" target="Zlmr2kHPyGNLL76UW4VX-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="510" as="sourcePoint"/>
+                        <mxPoint x="690" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-69" value="环境影响" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="300" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-70" value="消耗环境变量&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="360" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-71" value="更新环境变量&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="440" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-72" value="对环境无影响&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="520" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-74" value="impl" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="360" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-77" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;其它说明:&lt;br style=&quot;font-size: 13px;&quot;&gt;1.关键字&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;move&lt;/b&gt;&lt;/font&gt;: 捕获共享/可变引用时, 将目标值的也移入闭包....使引用与值绑于相同作用域, 具有&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 13px;&quot;&gt;相同存活期&lt;/font&gt;&lt;br style=&quot;font-size: 13px;&quot;&gt;2.&lt;b style=&quot;font-size: 13px;&quot;&gt;&lt;font color=&quot;#ff3333&quot; style=&quot;font-size: 13px;&quot;&gt;fn &lt;/font&gt;&lt;/b&gt;类型是函数指针,指向任意Rust函数..实现了Fn,FnMut,FnOnce, 区别是没有捕获功能&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=0;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="680" width="780" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-78" value="Fn,FnMut,FnOnce" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="600" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-79" value="无捕获,非闭包&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="600" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-80" value="可调多次" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="611" y="600" width="99" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-81" value="f()&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="600" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-82" value="let f: &lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;fn() -&amp;gt; r&lt;/font&gt;&lt;/b&gt; = FUNC" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="600" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-83" value="与环境无关&lt;br style=&quot;font-size: 13px;&quot;&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=5;fontSize=13;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="600" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-84" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="Zlmr2kHPyGNLL76UW4VX-82" target="Zlmr2kHPyGNLL76UW4VX-78" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="530" y="650" as="sourcePoint"/>
+                        <mxPoint x="580" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Zlmr2kHPyGNLL76UW4VX-85" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Rust 闭包与函数指针&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="230" width="780" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>

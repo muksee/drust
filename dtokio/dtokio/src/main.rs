@@ -1,19 +1,42 @@
-use tokio::io::{self, BufWriter, AsyncWriteExt};
-use tokio::fs::File;
+use std::{
+    thread,
+    time::Duration,
+};
+use tokio::runtime::Builder;
 
-#[tokio::main]
-async fn main() -> io::Result<()> {
-    let f = File::create("foo.txt").await?;
-    {
-        let mut writer = BufWriter::new(f);
+fn main() {
+    let sb = std::thread::Builder::new().stack_size( 1024 * 1024);
 
-        // Write a byte to the buffer.
-        writer.write(&[42u8]).await?;
+    let h = sb
+        .spawn(|| {
+            test_tokio();
+        })
+        .unwrap();
 
-        // Flush the buffer before it goes out of scope.
-        writer.flush().await?;
+    let _ = h.join();
+}
 
-    } // Unless flushed or shut down, the contents of the buffer is discarded on drop.
+fn test_tokio() {
+    let runtime = Builder::new_multi_thread()
+        .enable_all()
+        .worker_threads(1)
+        .thread_name("my-custom-name")
+        .thread_stack_size(4 * 655360000)
+        .build()
+        .unwrap();
 
-    Ok(())
+    runtime.block_on(async {
+        // for _ in 0..100 {
+        //     let _ = test_buf().await;
+        // }
+        
+    });
+}
+
+async fn test_buf() {
+    let buf = [0; 65536];
+    test_buf0(&buf).await;
+}
+async fn test_buf0(buf: &[u8]) {
+    println!("ttt");
 }
