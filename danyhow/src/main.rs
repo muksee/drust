@@ -16,12 +16,10 @@ use simplelog::{
     WriteLogger,
 };
 
+
 fn main() {
     if let Err(e) = CombinedLogger::init(vec![
-        SimpleLogger::new(
-            log::LevelFilter::Trace,
-            Config::default(),
-        ),
+        SimpleLogger::new(log::LevelFilter::Trace, Config::default()),
         TermLogger::new(
             log::LevelFilter::Trace,
             Config::default(),
