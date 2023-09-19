@@ -1,21 +1,10 @@
-use std::fs::{
-    self,
-    File,
-};
+use std::fs::{self, File};
 
-use anyhow::{
-    Context,
-    Error,
-};
+use anyhow::{Context, Error};
 use log;
 use simplelog::{
-    CombinedLogger,
-    Config,
-    SimpleLogger,
-    TermLogger,
-    WriteLogger,
+    CombinedLogger, Config, SimpleLogger, TermLogger, WriteLogger,
 };
-
 
 fn main() {
     if let Err(e) = CombinedLogger::init(vec![
