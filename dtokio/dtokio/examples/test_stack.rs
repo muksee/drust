@@ -7,7 +7,8 @@ use std::{
     },
     pin::Pin,
     sync::Arc,
-    time::Duration, thread,
+    thread,
+    time::Duration,
 };
 
 use parking_lot::RwLock;
@@ -41,15 +42,11 @@ async fn main0(lock: Arc<RwLock<i32>>) {
 // }
 
 fn main3(lock: Arc<RwLock<i32>>) {
-    let generator = ||{
+    let generator = || {
         yield 2;
         let guard = lock.read();
         drop(guard);
         yield 1;
         "foo"
     };
-
-    thread::spawn(move || {
-        let a = generator;
-    });
 }
