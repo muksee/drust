@@ -2,6 +2,7 @@
 resolver = "2"
 members = [
     # "rustnom",
+    # ---- STD LIB ----
     # "ruststd/modalloc",
     # "ruststd/modmem",
     # "ruststd/modops",
@@ -26,6 +27,7 @@ members = [
     # "ruststd/tychar",
     # "rustrefer/ch10type",
     # "toomanylist",
+    # ---- ASYNC ----
     # "dfutures",
     # "dtokio/dtokio",
     # "dtokio/dhyper",
@@ -37,18 +39,11 @@ members = [
     # "dtokio/dmio",
     # "dtokio/dproject",
     # "official/dlibc",
-    # "dreqwest",
-    # "dwasmtime/hello-world",
-    # "dwasmtime/mdp",
-    # "dwasmtime/embed",
-    # "dwasmedge/helloword",
-    # "drocket",
-    # "dmonoio",
-    # "drayon",
-    # "dserde",
+    # ---- LOG,ERROR ----
     "danyhow",
     # "dthiserror",
     # "dlog",
+    # ---- MACRO ----
     # "dmacro/dfunclike/lazystatic",
     # "dmacro/dfunclike/lazystatic_test",
     # "dmacro/dderive/heapsize",
@@ -59,6 +54,18 @@ members = [
     # "dmacro/dsyn",
     # "dmacro/dtest",
     # "dcrossbeam",
+    # ---- WASM ----
+    # "dwasmtime/hello-world",
+    # "dwasmtime/mdp",
+    # "dwasmtime/embed",
+    # "dwasmedge/helloword",
+    # ---- UI, WEB ----
+    # "dreqwest",
+    # "drocket",
+    # "dmonoio",
+    # "drayon",
+    # "dserde",
+    "ddioxus/dweb",
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
