@@ -73,7 +73,12 @@ members = [
     # "dmonoio",
     # "drayon",
     # "dserde",
-    "ddioxus/dweb",
+    "ddioxus/dguide",          # https://dioxuslabs.com/learn/0.4/reference
+    "ddioxus/drefer/dcontext",
+    "ddioxus/drefer/drender",
+    "ddioxus/drefer/dfuture",
+    "ddioxus/drouter/dfirst",
+    "ddioxus/bookcn",          # https://www.dioxus.cn/docs/intro
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
