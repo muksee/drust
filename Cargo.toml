@@ -3,7 +3,7 @@ resolver = "2"
 members = [
     # "rustnom",
     #
-    # ---- STD LIB ----
+    # ---- rust std lib ----
     # "ruststd/modalloc",
     # "ruststd/modmem",
     # "ruststd/modops",
@@ -29,7 +29,10 @@ members = [
     # "rustrefer/ch10type",
     # "toomanylist",
     #
-    # ---- ASYNC ----
+    # ---- some official crate ----
+    # "official/dlibc",
+    #
+    # ---- async, io, network ----
     # "dfutures",
     # "dtokio/dtokio",
     # "dtokio/dhyper",
@@ -40,10 +43,11 @@ members = [
     # "dtokio/dbytes",
     # "dtokio/dmio",
     # "dtokio/dproject",
-    # "official/dlibc",
+    "dtokio/diouring",
+    "dtokio/dtokiouring",
     #
     # ---- ERROR ----
-    "danyhow",
+    # "danyhow",
     # "dthiserror",
     #
     # ---- LOG ----
