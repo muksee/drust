@@ -1,0 +1,17 @@
+{
+    "CN": "www.drustls.com client",
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "hosts": [],
+    "names": [
+        {
+            "C": "Galaxy",
+            "ST": "Solar",
+            "L": "Earth",
+            "O": "drustls",
+            "OU": "drustls study"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+[package]
+name = "dpingora"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.77"
+pingora = { version = "0.1.0", features = ["proxy", "lb", "cache"] }
+prometheus = "0.13.3"
+
+
+[dev-dependencies]
+structopt = "0.3"
+tokio = { version = "1", features = ["rt-multi-thread", "signal"] }
+matches = "0.1"
+env_logger = "0.9"
+reqwest = { version = "0.11", features = ["rustls"], default-features = false }
+hyperlocal = "0.8"
+hyper = "0.14"
+jemallocator = "0.5"
+async-trait = "*"
+http = "*"
+log = "*"
+prometheus = "0.13"
+once_cell = "*"
+bytes = "*"

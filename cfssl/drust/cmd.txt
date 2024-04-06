@@ -1,0 +1,6 @@
+1.自签名根证书
+cfssl gencert -initca drust-ca-csr.json | cfssljson -bare drust-ca
+
+2.为drustls生成客户单和服务端证书
+cfssl gencert -ca drust-ca.pem -ca-key drust-ca-key.pem -config drust-ca-config.json -profile drustls-server drustls/drustls-server-csr.json | cfssljson -bare drustls-server-ca
+cfssl gencert -ca drust-ca.pem -ca-key drust-ca-key.pem -config drust-ca-config.json -profile drustls-client drustls/drustls-client-csr.json | cfssljson -bare drustls-client-ca

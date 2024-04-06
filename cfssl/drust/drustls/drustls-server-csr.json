@@ -1,0 +1,20 @@
+{
+    "CN": "www.drustls.com",
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "hosts": [
+        "*.drustls.com",
+        "drustls.com"
+    ],
+    "names": [
+        {
+            "C": "Galaxy",
+            "ST": "Solar",
+            "L": "Earth",
+            "O": "drustls",
+            "OU": "drustls study"
+        }
+    ]
+}
