@@ -24,18 +24,23 @@ const LISTEN_ADDR: &str = "127.0.0.1:3000";
 
 #[tokio::main]
 async fn main() -> Result {
+    // 日志组件
     let _ = env_logger::builder()
         .filter_level(log::LevelFilter::Info)
         .try_init();
 
+    // TCP启动监听
     let listener = TcpListener::bind(LISTEN_ADDR).await?;
 
+    // TCP接受连接
     loop {
         if let Ok((socket, peer_addr)) = listener
             .accept()
             .await
         {
             info!("Receive tcp conn from {:?}", peer_addr);
+
+            // 连接交给上层H2协议进行处理
             tokio::spawn(async {
                 if let Err(e) = serve(socket).await {
                     error!("serve socket err: {:?}", e);
@@ -46,14 +51,18 @@ async fn main() -> Result {
 }
 
 async fn serve(socket: TcpStream) -> Result {
+    // H2建立连接
     let mut conn = server::handshake(socket).await?;
     info!("H2 connection bound");
 
+    // H2接受请求
     while let Some(result) = conn
         .accept()
         .await
     {
         let (request, respond) = result?;
+
+        // 处理用户请求和响应
         tokio::spawn(async {
             if let Err(e) = handle_request(request, respond).await {
                 error!("error while handling request: {}", e);
