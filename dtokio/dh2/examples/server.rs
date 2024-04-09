@@ -1,3 +1,5 @@
+//! HTTP2 服务端演示程序
+
 use std::error::Error;
 
 use bytes::Bytes;
@@ -55,14 +57,15 @@ async fn serve(socket: TcpStream) -> Result {
     let mut conn = server::handshake(socket).await?;
     info!("H2 connection bound");
 
-    // H2接受请求
+    // H2接受下一个入栈请求
+    // 每个请求都对应一个自己的Stream
     while let Some(result) = conn
         .accept()
         .await
     {
         let (request, respond) = result?;
 
-        // 处理用户请求和响应
+        // 处理对应Stream的接收和响应
         tokio::spawn(async {
             if let Err(e) = handle_request(request, respond).await {
                 error!("error while handling request: {}", e);
@@ -80,7 +83,10 @@ async fn handle_request(
 ) -> Result {
     info!("Got request: {:?}", request);
 
+    // 从请求对象Request<T>中取出正文句柄(这里是RecvStream),用于后续读取真正的正文.
     let body = request.body_mut();
+
+    // 从流中的下一个Data帧中读取请求正文
     while let Some(data) = body
         .data()
         .await
@@ -93,11 +99,14 @@ async fn handle_request(
             .release_capacity(data.len());
     }
 
+    // 创建响应正文
     let response = Response::new(());
 
+    // 发送响应正文的Header帧,返回发送后续帧的句柄
     let mut send = respond.send_response(response, false)?;
     info!(">>>> send");
 
+    // 发送响应正文的Data帧或Trailer帧,最后一个Data帧发送完毕后,标记Stream结束
     send.send_data(Bytes::from_static(b"Hello h2"), false)?;
     send.send_data(Bytes::from_static(b"H2"), true)?;
 
