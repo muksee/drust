@@ -28,7 +28,7 @@ const LISTEN_ADDR: &str = "127.0.0.1:3000";
 async fn main() -> Result {
     // 日志组件
     let _ = env_logger::builder()
-        .filter_level(log::LevelFilter::Info)
+        .filter_level(log::LevelFilter::Trace)
         .try_init();
 
     // TCP启动监听
@@ -58,14 +58,16 @@ async fn serve(socket: TcpStream) -> Result {
     info!("H2 connection bound");
 
     // H2接受下一个入栈请求
-    // 每个请求都对应一个自己的Stream
+    // 每个请求对应一个Stream,多个Stream复用同一个连接,通过每个包对应的StreamID在连接中分拣各个流的数据.
     while let Some(result) = conn
         .accept()
         .await
     {
+        // 每当分离出一个新的请求(新的Stream),就返回此Stream对应的请求和响应两个句柄,用于操作请求.
         let (request, respond) = result?;
 
         // 处理对应Stream的接收和响应
+        // 每个Stream都启动单独的协程处理对应的业务,所有Stream的往返数据最终都是复用同一个连接进行传输.
         tokio::spawn(async {
             if let Err(e) = handle_request(request, respond).await {
                 error!("error while handling request: {}", e);
@@ -73,6 +75,7 @@ async fn serve(socket: TcpStream) -> Result {
         });
     }
 
+    // 当接收操作返回了,但是没有获取到新的请求,则表明收到了连接关闭的信号.
     log::info!("~~~~~~~~~~~~~~~~~~~ H2 connection CLOSE!!!! ~~~~~~~~~~~~~~~~~~~");
     Ok(())
 }
@@ -91,9 +94,11 @@ async fn handle_request(
         .data()
         .await
     {
+        // 从流中读取一个帧
         let data = data?;
         info!("<<<< recv {:?}", data);
 
+        // 通过流控,将帧所占额度从流中释放
         let _ = body
             .flow_control()
             .release_capacity(data.len());
@@ -102,7 +107,7 @@ async fn handle_request(
     // 创建响应正文
     let response = Response::new(());
 
-    // 发送响应正文的Header帧,返回发送后续帧的句柄
+    // 发送响应正文的Header帧,返回发送后续帧的句柄.标记为false表明流还未结束,后续还有帧.
     let mut send = respond.send_response(response, false)?;
     info!(">>>> send");
 
