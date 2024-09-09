@@ -1,4 +1,7 @@
-use std::sync::Arc;
+use std::{
+    fs,
+    sync::Arc,
+};
 
 use pingora::{
     http::RequestHeader,
@@ -21,6 +24,13 @@ use pingora::{
         background::background_service,
         listening::Service,
     },
+    tls::{
+        ssl::SslVerifyMode,
+        x509::{
+            store::X509StoreBuilder,
+            X509,
+        },
+    },
     upstreams::peer::HttpPeer,
 };
 
@@ -39,9 +49,9 @@ fn main() {
 
     // 2.创建上游负载组
     let mut upstreams = LoadBalancer::try_from_iter([
-        "127.0.0.1:3000",
-        "127.0.0.1:3001",
-        "127.0.0.1:3002",
+        "httpbin.org:80",
+        // "127.0.0.1:3001",
+        // "127.0.0.1:3002",
     ])
     .unwrap();
 
@@ -70,11 +80,24 @@ fn main() {
     // 添加HTTP监听地址
     lb.add_tcp("0.0.0.0:6188");
     // 添加HTTPS监听地址
-    let cert_path = format!("{}/keys/server.crt", env!("CARGO_MANIFEST_DIR"));
-    let key_path = format!("{}/keys/key.pem", env!("CARGO_MANIFEST_DIR"));
+    let cert_path =
+        format!("{}/keys/drustls-server-ca.pem", env!("CARGO_MANIFEST_DIR"));
+    let key_path =
+        format!("{}/keys/drustls-server-ca-key.pem", env!("CARGO_MANIFEST_DIR"));
 
     let mut tls_settings =
         TlsSettings::intermediate(&cert_path, &key_path).unwrap();
+
+    // let verify_path = format!("{}/keys/drust-ca.pem", env!("CARGO_MANIFEST_DIR"));
+    // let pem = fs::read(verify_path).unwrap();
+    // let mut x509_store_builder = X509StoreBuilder::new().unwrap();
+    // let cert = X509::from_pem(pem.as_ref()).unwrap();
+    // let _ = x509_store_builder.add_cert(cert);
+    // let store = x509_store_builder.build();
+    // tls_settings.set_verify(SslVerifyMode::FAIL_IF_NO_PEER_CERT);
+    // tls_settings.set_verify(SslVerifyMode::PEER);
+    // let _ = tls_settings.set_verify_cert_store(store);
+
     tls_settings.enable_h2();
     lb.add_tls_with_settings("0.0.0.0:6189", None, tls_settings);
 

@@ -74,8 +74,8 @@ fn main() {
     my_server.bootstrap();
 
     // 证书文件
-    let cert_path = format!("{}/keys/server.crt", env!("CARGO_MANIFEST_DIR"));
-    let key_path = format!("{}/keys/key.pem", env!("CARGO_MANIFEST_DIR"));
+    let cert_path = format!("{}/keys/drustls-server-ca.pem", env!("CARGO_MANIFEST_DIR"));
+    let key_path = format!("{}/keys/drustls-server-ca-key.pem", env!("CARGO_MANIFEST_DIR"));
 
     // TCP回声服务器
     // 1.TCP 2.TLS
@@ -114,8 +114,7 @@ fn main() {
         background_service("example", ExampleBackgroundService::new());
 
     // Prometheus服务器
-    let mut prometheus_service_http =
-        ListenerService::prometheus_http_service();
+    let mut prometheus_service_http = ListenerService::prometheus_http_service();
     prometheus_service_http.add_tcp("0.0.0.0:4080");
     prometheus_service_http
         .add_tls("0.0.0.0:4443", &cert_path, &key_path)
