@@ -1,0 +1,10 @@
+max_width = 82
+comment_width = 82
+array_width = 82
+chain_width = 0
+fn_call_width = 82
+format_code_in_doc_comments = true
+#Horizontal, HorizontalVertical,Mixed, Vertical
+imports_layout = "Vertical"
+#Preserve, Crate, Module, Item, One
+imports_granularity = "Crate"

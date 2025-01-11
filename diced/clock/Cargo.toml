@@ -1,0 +1,8 @@
+[package]
+name = "clock"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+time = { version = "0.3.36", features = ["local-offset"] }
+iced = { version = "0.12.1", features = ["canvas", "tokio", "debug"] }

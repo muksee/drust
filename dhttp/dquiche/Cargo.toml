@@ -1,0 +1,13 @@
+[package]
+name = "dquiche"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+env_logger = "0.11.3"
+log = "0.4.21"
+mio = { version = "0.8.11", features = ["net"] }
+quiche = "0.20.1"
+ring = "0.17.8"

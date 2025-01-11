@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" modified="2023-07-03T04:44:24.735Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.67" etag="66hYu86sjt8xQvXUCzJq" version="21.5.2" type="device">
+  <diagram name="第 1 页" id="P-cv6vF8_e_J8mqZ1eUA">
+    <mxGraphModel dx="1728" dy="-197" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-12" value="Trait BuildHasher 创建哈希器" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1300" width="300" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-13" value="+ Hasher: Hasher" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-12">
+          <mxGeometry y="26" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-14" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-12">
+          <mxGeometry y="52" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-15" value="+ builder_hasher(&amp;amp;self) -&amp;gt;Self::Hasher&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-12">
+          <mxGeometry y="60" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-16" value="Trait Hash 可哈希类型实现" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1644" width="300" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-19" value="+&amp;nbsp;hash&amp;lt;H&amp;gt;(&amp;amp;self, state: &amp;amp;mut H&lt;span style=&quot;font-size: 12px; background-color: var(--code-block-background-color);&quot;&gt;) where H: Haser&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-16">
+          <mxGeometry y="26" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-21" value="+&amp;nbsp;hash_slice&amp;lt;H&amp;gt;(data: &amp;amp;[Self]&lt;span style=&quot;font-size: 12px; background-color: var(--code-block-background-color);&quot;&gt;, state: &lt;/span&gt;&amp;amp;mut H&lt;span style=&quot;font-size: 12px; background-color: var(--code-block-background-color);&quot;&gt;)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-16">
+          <mxGeometry y="52" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-22" value="Trait Hasher&amp;nbsp; 过程与状态管理" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1490" width="300" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-25" value="+&amp;nbsp;finish(&amp;amp;self) -&amp;gt; u64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-22">
+          <mxGeometry y="26" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-26" value="+&amp;nbsp;write(&amp;amp;mut self, bytes: &amp;amp;[u8&lt;span style=&quot;font-size: 12px;&quot;&gt;])&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-22">
+          <mxGeometry y="52" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-27" value="+&amp;nbsp;writeXXX, 13 more methods" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="Maa0e5nSkO_Cuqku1ieY-22">
+          <mxGeometry y="78" width="300" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-30" value="Struct&lt;br&gt;hash_map::DefaultHasher" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1490" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-31" value="Struct&lt;br&gt;BuildHasherDefault&amp;lt;T&amp;gt;&lt;br&gt;&lt;br&gt;可以用于创建某Hasher类型的默认实例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1300" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-32" value="MyType&lt;br&gt;&lt;br&gt;执行:&lt;br&gt;① 传入Hasher: MyType.hash(&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;hasher&lt;/b&gt;&lt;/font&gt;)&lt;br&gt;② 完成Hasher: &lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;hasher&lt;/font&gt;&lt;/b&gt;.finish()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1643.5" width="220" height="79.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-34" value="实现" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Maa0e5nSkO_Cuqku1ieY-32" target="Maa0e5nSkO_Cuqku1ieY-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="1760" as="sourcePoint" />
+            <mxPoint x="520" y="1710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-36" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Maa0e5nSkO_Cuqku1ieY-31" target="Maa0e5nSkO_Cuqku1ieY-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1710" as="sourcePoint" />
+            <mxPoint x="690" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-38" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Maa0e5nSkO_Cuqku1ieY-36">
+          <mxGeometry y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-37" value="实现" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Maa0e5nSkO_Cuqku1ieY-30" target="Maa0e5nSkO_Cuqku1ieY-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="1413" as="sourcePoint" />
+            <mxPoint x="420" y="1413" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-39" value="传给" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="Maa0e5nSkO_Cuqku1ieY-22" target="Maa0e5nSkO_Cuqku1ieY-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="1770" as="sourcePoint" />
+            <mxPoint x="690" y="1720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-48" value="&lt;div style=&quot;&quot;&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1308" width="18" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-49" value="Struct&lt;br&gt;BuildHasherDefault&amp;lt;T&amp;gt;&lt;br&gt;&lt;br&gt;可以用于创建某Hasher类型的默认实例" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1300" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-50" value="Struct&lt;br&gt;hash_map::DefaultHasher" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1490" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-51" value="如何创建 Hasher 实例&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;1. 自建 BuildHasher 实现&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;2. 已有 BuilderHasher 实现 BuilderHasherDefault&amp;lt;T&amp;gt; 调用 Hasher类型的Default 创建&lt;br&gt;3. Hasher自带构造方法: 如DefaultHaser::new()&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1404" width="581" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="Maa0e5nSkO_Cuqku1ieY-33" value="生成" style="endArrow=classic;html=1;rounded=0;exitX=0.9;exitY=0.5;exitDx=0;exitDy=0;entryX=0.903;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;exitPerimeter=0;" edge="1" parent="1" source="Maa0e5nSkO_Cuqku1ieY-15" target="Maa0e5nSkO_Cuqku1ieY-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="1760" as="sourcePoint" />
+            <mxPoint x="520" y="1710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="635" y="1441" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,25 @@
+{
+    "signing": {
+        "default": {
+            "expiry": "876000h"
+        },
+        "profiles": {
+            "drustls-server": {
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "server auth"
+                ],
+                "expiry": "876000h"
+            },
+            "drustls-client": {
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "client auth"
+                ],
+                "expiry": "876000h"
+            }
+        }
+    }
+}

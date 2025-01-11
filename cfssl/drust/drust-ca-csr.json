@@ -1,0 +1,19 @@
+{
+    "CN": "DRust Root CA",
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "Galaxy",
+            "ST": "Solar",
+            "L": "Earth",
+            "O": "DRust",
+            "OU": "Root CA"
+        }
+    ],
+    "ca": {
+        "expiry": "876000h"
+    }
+}

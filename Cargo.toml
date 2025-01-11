@@ -1,0 +1,141 @@
+[workspace]
+members = [
+    # "rustnom",
+    #
+    # ---- rust std lib ----
+    "ruststd/modalloc",
+    "ruststd/modmem",
+    "ruststd/modops",
+    "ruststd/modptr",
+    "ruststd/modpin",
+    "ruststd/modany",
+    "ruststd/modbacktrace",
+    "ruststd/modascii",
+    "ruststd/modarray",
+    "ruststd/modborrow",
+    "ruststd/modboxed",
+    "ruststd/modcell",
+    "ruststd/modcmp",
+    "ruststd/modcollections",
+    "ruststd/modhash",
+    "ruststd/modprocess",
+    "ruststd/modpanic",
+    "ruststd/modresult",
+    "ruststd/modsync",
+    "ruststd/moderror",
+    "ruststd/modthread",
+    "ruststd/typointer",
+    "ruststd/tychar",
+    # "rustrefer/ch10type",
+    # "toomanylist",
+    # "ruststd/modtry",
+    # "ruststd/modtask",
+    #
+    # ---- some official crate ----
+    # "official/dlibc",
+    #
+    # ---- async, io, network ----
+    # "dfutures",
+    # "dtokio/dtokio",
+    # "dtokio/dhyper",
+    # "dtokio/dtower",
+    # "dtokio/dtracing",
+    # "dtokio/daxum",
+    # "dtokio/dh2",
+    # "dtokio/dh3",
+    # "dtokio/dtonic",
+    # "dtokio/dbytes",
+    # "dtokio/dmio",
+    # "dtokio/dproject",
+    "dtokio/diouring",
+    # "dtokio/dtokiouring",
+    # "dactor",
+    # "dpingora",
+    # "dtls/drustls",
+    # "dtls/dnativetls",
+    # "dhttp/dquiche",
+    #
+    # ---- ERROR ----
+    # "danyhow",
+    # "dthiserror",
+    #
+    # ---- LOG ----
+    "dlog",
+    #
+    # ---- MACRO ----
+    # "dmacro/dfunclike/lazystatic",
+    # "dmacro/dfunclike/lazystatic_test",
+    # "dmacro/dderive/heapsize",
+    # "dmacro/dderive/heapsize_derive",
+    # "dmacro/dderive/heapsize_test",
+    # "dmacro/dattribute/tracevar",
+    # "dmacro/dattribute/tracevar_test",
+    # "dmacro/dsyn",
+    # "dmacro/dtest",
+    # "dcrossbeam",
+    #
+    # ---- WASM ----
+    # "dwasmtime/hello-world",
+    # "dwasmtime/mdp",
+    # "dwasmtime/embed",
+    # "dwasmedge/helloword",
+    #
+    # ---- UI, WEB ----
+    # "dreqwest",
+    # "drocket",
+    # "dmonoio",
+    # "drayon",
+    # "dserde",
+    # "ddioxus/dguide",          # https://dioxuslabs.com/learn/0.4/reference
+    # "ddioxus/drefer/dcontext",
+    # "ddioxus/drefer/drender",
+    # "ddioxus/drefer/dfuture",
+    # "ddioxus/drouter/dfirst",
+    # "ddioxus/bookcn",          # https://www.dioxus.cn/docs/intro
+    # "diced/counter",
+    # "diced/styling",
+    # "diced/custom_widget",
+    # "diced/gradient",
+    # "diced/layout",
+    # "diced/tooltip",
+    # "diced/picklist",
+    # "diced/stopwatch",
+    # "diced/events",
+    # "diced/exit",
+    # "diced/clock",
+    # "diced/combo_box",
+    # "diced/component",
+    # "diced/solar_system",
+    # "diced/sysinfo",
+    # "diced/geometry",
+    # "diced/arc",
+    # "diced/progress_bar",
+    # "diced/todos",
+    # "diced/tour", 
+    # "diced/modal", 
+    # "diced/editor", 
+    # "diced/counter_first",
+    "dleptos/tutorial",
+    # ---- DB ----
+    # "dsqlx",
+    # ---- CLI ----
+    # "dcli/dstructopt",
+    # "dcli/dclap",
+    # "dcli/dratatui",
+]
+
+resolver = "2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# [profile.release]
+# opt-level = 'z'
+# lto = true
+# strip = true
+# codegen-units = 1
+# panic = 'abort'
+# debug-assertions = false
+# incremental = false
+# overflow-checks = false
+# debug = false
+# rpath = false
