@@ -1,6 +1,16 @@
 [workspace]
-members = [
+members = ["drustix",
+    # 第一部分：教程练习，官方,非官方。
+    # 第二部分：模块练习，按功能或来源分类。
+    # 第三部分：个人文章代码
+    #
+    # ---- book official  ----
     # "rustnom",
+    # "rustrefer/ch10type",
+    #
+    # ---- book unofficial  ----
+    "rustatomics", # Rust Atomics And Locks
+    # "toomanylist",
     #
     # ---- rust std lib ----
     # "ruststd/modalloc",
@@ -24,18 +34,17 @@ members = [
     # "ruststd/modsync",
     # "ruststd/moderror",
     # "ruststd/modthread",
+    # "ruststd/modtry",
+    # "ruststd/modtask",    
     # "ruststd/typointer",
     # "ruststd/tychar",
-    # "rustrefer/ch10type",
-    # "toomanylist",
-    # "ruststd/modtry",
-    # "ruststd/modtask",
     #
-    # ---- some official crate ----
+    # ---- official crate ----
     # "official/dlibc",
     #
     # ---- async, io, network ----
     # "dfutures",
+    # "dcrossbeam",
     # "dtokio/dtokio",
     # "dtokio/dhyper",
     # "dtokio/dtower",
@@ -54,14 +63,14 @@ members = [
     # "dtls/drustls",
     # "dtls/dnativetls",
     # "dhttp/dquiche",
-    "dsmol",
+    # "dsmol",
     #
     # ---- ERROR ----
     # "danyhow",
     # "dthiserror",
     #
     # ---- LOG ----
-    "dlog", 
+    # "dlog", 
     #
     # ---- MACRO ----
     # "dmacro/dfunclike/lazystatic",
@@ -73,7 +82,6 @@ members = [
     # "dmacro/dattribute/tracevar_test",
     # "dmacro/dsyn",
     # "dmacro/dtest",
-    # "dcrossbeam",
     #
     # ---- WASM ----
     # "dwasmtime/hello-world",
@@ -117,8 +125,10 @@ members = [
     # "diced/editor", 
     # "diced/counter_first",
     # "dleptos/tutorial",
+    #
     # ---- DB ----
     # "dsqlx",
+    #
     # ---- CLI ----
     # "dcli/dstructopt",
     # "dcli/dclap",

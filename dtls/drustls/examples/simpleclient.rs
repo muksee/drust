@@ -64,9 +64,7 @@ fn main() {
         .unwrap();
 
     // 7.打印TLS协商的加密套件
-    let cipher_suite = tls
-        .conn
-        .negotiated_cipher_suite();
+    let cipher_suite = tls.conn.negotiated_cipher_suite();
     let _ = writeln!(
         &mut std::io::stderr(),
         "Current cipher suite: {:?}",
@@ -75,7 +73,6 @@ fn main() {
 
     // 8.HTTP读取
     let mut plaintext = Vec::new();
-    tls.read_to_end(&mut plaintext)
-        .unwrap();
+    tls.read_to_end(&mut plaintext).unwrap();
     let _ = writeln!(&mut std::io::stdout(), "Return: {} bytes", plaintext.len());
 }
